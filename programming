@@ -1,0 +1,32 @@
+Create a class named 'Programming'. While creating an object of the class, if nothing is passed to it, then the message "I love
+programming languages" should be printed. If some String is passed to it, then in place of "programming languages" the name of
+that String variable should be printed. (Read the string from the user through keyboard)
+For example, while creating object if we pass "Java", then "I love Java" should be printed.
+
+CODE:
+
+import java.util.*;
+class Programming
+{
+String s;
+Programming()
+{
+s = "I love programming languages";
+}
+Programming(String s)
+{
+this.s = "I love "+s;
+}
+}
+class Que1b_A3
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+String name=sc.next();
+Programming obj1 = new Programming();
+Programming obj2 = new Programming(name);
+System.out.println(obj1.s);
+System.out.println(obj2.s);
+}
+}
